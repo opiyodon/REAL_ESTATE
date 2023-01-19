@@ -11,7 +11,7 @@
 				</div>
 
 				<div class="ROW flex flex-row gap-3 pt-3 pl-2">
-					<p class="text-primary text-5xl">>>></p>
+					<p class="text-primary text-5xl">>>>></p>
 					<p class="text-white pt-1 text-2xl">Login or Register to access our services.</p>
 				</div>
 				
