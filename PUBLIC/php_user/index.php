@@ -7,7 +7,7 @@
 
 				<div class="flex flex-col gap-5">
 					<p class="text-8xl text-white">Let Us</p>
-					<p class="text-6xl text-primary">Guide You Home</p>
+					<p class="text-6xl text-primary">Guide You Homes</p>
 				</div>
 
 				<div class="ROW flex flex-row gap-3 pt-3 pl-2">
