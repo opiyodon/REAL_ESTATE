@@ -1,0 +1,16 @@
+REAL ESTATE AGENTS
+1.buy
+2.sell
+3.rent //homes and other properties
+
+typical days
+1.meeting with clients
+2.staging and showing houses
+3.scheduling apprecitions and inspections
+
+administrative tasks
+1.responding to leads
+2.updating client databases
+3.coordinating appointments
+4.processing documents
+5.researching listings to develop CMA reports

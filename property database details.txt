@@ -1,0 +1,81 @@
+/*DATABASE DESIGN*/
+//Tables i need
+
+
+1.user
+// DETAILS IN USER TABLE
+
+id
+full name
+username
+email
+phone
+password
+admin
+
+
+
+
+2.properties
+// DETAILS IN PROPERTY TABLE
+
+id//
+type//
+status//
+city//
+wallpaper_name//
+picture_name//
+amount//
+name//
+description//
+bedrooms//
+bathrooms//
+squareFt//
+owner//
+phone//
+whatsapp//
+email//
+featured//
+active//
+amenity
+
+
+
+3.blogs
+// DETAILS IN BLOGS TABLE
+
+id
+wallpaper_name
+type
+name
+date
+picture_name
+description
+review
+
+
+
+4.order
+// DETAILS IN ORDER TABLE
+
+id
+wallpaper_name
+type
+name
+date
+status === bought/rent/cancelled
+#delete==delete property
+
+
+
+#buy a home//rent a home => explore
+properties
+#sell a home => Add listing.php
+
+EXPLORE PROPERTIES
+
+//TEXT explaining difference between
+explore property
+and featured listing
+
+FEATURED LISTINGS

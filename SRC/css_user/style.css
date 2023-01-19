@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+@layer base{
+    :root{
+        --primary:#8fc008;
+        --primary2:#546918;
+        --primary3:#e4faab;
+
+        --bg_bright:#dddee0;
+        --bg_bright2:#d6d3d3;
+        --bg_dim:#30312f;
+        --bg_dim2:#080808;
+
+        --border_bright:#d1d5db;
+        --border_dim:#374151;
+
+        --light_txt:#374151;
+        --light_txt2:#8d8f91;
+    }
+
+    .DARK_MODE{
+        --bg_bright:#1c1f24;
+        --bg_bright2:#201d1d;
+        --bg_dim:#000207;
+        --bg_dim2:#000207;
+
+        --border_bright:#3e3e3f;
+        --border_dim:#757677;
+
+        --light_txt:#f5f6f8;
+        --light_txt2:#f5f6f8;
+    }
+}
+
+
+body.DARK{
+    @apply DARK_MODE transition-all duration-1000 ease-in-out;
+}
+
+.ACTIVE{
+    @apply text-primary transition-all duration-1000 ease-in-out;
+}
+
+.SEARCH_GROUP{
+    @apply pt-5 transition-all duration-1000 ease-in-out;
+}
+
+.SEARCH_CONTROL{
+    @apply  h-12 p-2 pr-12 rounded-lg text-lg border-light_txt border-2 focus:outline-none;
+}
+
+.BTN{
+    @apply flex items-center outline-none bg-primary hover:bg-primary2 text-lg transition-all duration-500 ease-in-out;
+}
+
+.BTN2{
+    @apply flex items-center outline-none bg-primary hover:bg-primary2 py-2 rounded-md cursor-pointer px-5 text-xl transition-all duration-500 ease-in-out;
+}
+
+.SECTION_TITLE{
+    @apply text-xl flex justify-center w-44 py-1 rounded-full bg-primary3 text-primary;
+}
+
+.Card{
+    @apply rounded-2xl px-9 py-12 shadow-2xl shadow-light_bg_dim w-full h-full flex flex-col justify-center items-center text-center border-b-8 border-b-primary transition-all duration-500 ease-in-out;
+}
+
+.SERVICE_TITLE{
+    @apply pt-5 py-3 text-2xl font-bold;
+}
+
+.Card2{
+    @apply flex flex-row items-center gap-3 pl-3;
+}
+
+.CIRCLE1{
+    @apply absolute rounded-full bg-primary w-8 h-8 flex text-center justify-center items-center left-5 top-2;
+}
+
+.CIRCLE2{
+    @apply rounded-full p-10 border-2 border-light_border_bright w-44 h-44 flex flex-row justify-center items-center text-center transition-all duration-500 ease-in-out;
+}
+
+.LINE_DOTS{
+    @apply text-light_bg_dim;
+}
+
+.CIRCLE3{
+    @apply rounded-full bg-light_border_bright w-8 h-8;
+}
+
+.Card3{
+    @apply rounded-2xl px-9 py-12 shadow-2xl shadow-light_bg_dim w-full h-full flex flex-col justify-center items-center text-center border-b-8 border-b-primary transition-all duration-500 ease-in-out;
+}
+
+.cadz{
+    @apply rounded-xl cursor-pointer;
+}
+
+.BADGE{
+    @apply bg-primary py-1 px-2 w-24;
+}
+
+.Card4{
+    @apply rounded-2xl py-5 shadow-2xl shadow-light_bg_dim w-full h-full flex flex-col justify-center items-center text-center border-t-8 border-t-primary transition-all duration-500 ease-in-out;
+}
+
+.FORM_ITEM{
+    @apply mb-7 transition-all duration-500 ease-in-out;
+}
+
+.FORM_CONTROL{
+    @apply w-full rounded-full outline-2 outline-primary bg-light_bg_bright focus:shadow-2xl focus:shadow-light_border_dim focus:outline-none transition-all duration-500 ease-in-out;
+}
+
+.FORM_CONTROL_MESSAGE{
+    @apply w-full rounded-3xl outline-2 outline-primary bg-light_bg_bright focus:shadow-2xl focus:shadow-light_border_dim focus:outline-none transition-all duration-500 ease-in-out;
+}
+
+.FOOTER_TITLE{
+    @apply text-3xl pb-7 transition-all duration-500 ease-in-out;
+}
+
+.TBL_FULL{
+    @apply w-full transition-all duration-500 ease-in-out;
+}
+
+.TBL_30{
+    @apply w-1/4 transition-all duration-500 ease-in-out;
+}
+
+.TH{
+    @apply border-b-2 border-b-light_border_dim pt-1 pb-3 transition-all duration-500 ease-in-out;
+}
+
+td{
+    @apply py-3 transition-all duration-500 ease-in-out;
+}
+
+.INPUT{
+    @apply rounded-md text-light_txt bg-transparent border-primary border-2 py-1 px-3 focus:outline-none transition-all duration-1000 ease-in-out;
+}
+
+.INPUT2{
+    @apply rounded-md text-light_txt bg-light_bg_bright2 border-primary border-2 py-1 px-3 focus:outline-none transition-all duration-1000 ease-in-out;
+}
+
+.INPUT3{
+    @apply rounded-md text-light_txt bg-light_bg_bright2 py-2 h-12 px-3 border-2 border-light_txt placeholder-light_txt transition-all duration-1000 ease-in-out;
+}
+
+.SUCCESS{
+    @apply text-green-600 transition-all duration-500 ease-in-out;
+}
+
+.ERROR{
+    @apply text-red-600 transition-all duration-500 ease-in-out;
+}
+
+.MAIN_CONTENT{
+    @apply py-10 px-20 transition-all duration-500 ease-in-out;
+}
+
+.HEADER{
+    @apply font-bold pb-5 text-2xl transition-all duration-500 ease-in-out;
+}
+
+.COL_4{
+    @apply bg-light_bg_bright2 w-1/4 m-1 py-5 flex flex-col text-center transition-all duration-500 ease-in-out;
+}

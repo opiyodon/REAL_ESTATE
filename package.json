@@ -1,0 +1,18 @@
+{
+  "name": "web-development",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build":"tailwindcss build SRC/css_user/style.css -o PUBLIC/css_user/style.css",
+    "build2":"tailwindcss build SRC/css_admin/style.css -o PUBLIC/css_admin/style.css",
+    
+    "watch":"onchange 'tailwind.config.js' './PUBLIC/index.html' './PUBLIC/home.html' './PUBLIC/about.html' './PUBLIC/contact.html' './PUBLIC/properties.html' './PUBLIC/myaccount.html' './PUBLIC/login.html' './PUBLIC/forgot_password.html' './PUBLIC/admin_login.html' './PUBLIC/register.html' './PUBLIC/script.js' './PUBLIC/email.js' './SRC/css_admin/style.css' -- npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}

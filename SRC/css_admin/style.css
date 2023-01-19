@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+@layer base{
+    :root{
+        --primary:#8fc008;
+        --primary2:#546918;
+        
+        --primary3:#7c3aed;
+        --primary3b:#5b21b6;
+
+        --primary4:#ca8a04;
+        --primary4b:#854d0e;
+
+        --primary5:#e11d48;
+        --primary5b:#9f1239;
+
+        --bg_bright:#dddee0;
+        --bg_bright2:#d6d3d3;
+        --bg_dim:#30312f;
+        --bg_dim2:#080808;
+
+        --border_bright:#d1d5db;
+        --border_dim:#374151;
+
+        --light_txt:#374151;
+        --light_txt2:#8d8f91;
+    }
+
+    .DARK_MODE{
+        --bg_bright:#1c1f24;
+        --bg_bright2:#201d1d;
+        --bg_dim:#000207;
+        --bg_dim2:#000207;
+
+        --border_bright:#3e3e3f;
+        --border_dim:#757677;
+
+        --light_txt:#f5f6f8;
+        --light_txt2:#f5f6f8;
+    }
+}
+
+
+body.DARK{
+    @apply DARK_MODE transition-all duration-1000 ease-in-out;
+}
+
+.BTN{
+    @apply flex items-center outline-none bg-primary hover:bg-primary2 text-lg transition-all duration-500 ease-in-out;
+}
+
+.BTN_PRI{
+    @apply flex items-center outline-none bg-primary3 hover:bg-primary3b py-1 rounded-md cursor-pointer font-bold w-36 px-5 text-lg transition-all duration-500 ease-in-out;
+}
+
+.BTN_SEC{
+    @apply flex items-center outline-none bg-primary4 hover:bg-primary4b py-1 rounded-md cursor-pointer font-bold px-5 text-lg transition-all duration-500 ease-in-out;
+}
+
+.BTN_DAN{
+    @apply flex items-center outline-none bg-primary5 hover:bg-primary5b py-1 rounded-md cursor-pointer font-bold px-5 text-lg transition-all duration-500 ease-in-out;
+}
+
+.SUCCESS{
+    @apply text-green-600;
+}
+
+.ERROR{
+    @apply text-red-600;
+}
+
+.MAIN_CONTENT{
+    @apply py-10 px-20;
+}
+
+.HEADER{
+    @apply font-bold pb-5 text-2xl;
+}
+
+.COL_4{
+    @apply bg-light_bg_bright2 w-1/4 m-1 py-5 flex flex-col text-center;
+}
+
+.TBL_FULL{
+    @apply w-full;
+}
+
+.TBL_30{
+    @apply w-1/4;
+}
+
+.TH{
+    @apply border-b-2 border-b-light_border_dim pt-1 pb-3;
+}
+
+td{
+    @apply py-3;
+}
+
+.INPUT{
+    @apply rounded-md text-light_txt bg-transparent border-primary border-2 py-1 px-3;
+}
+
+.INPUT2{
+    @apply rounded-md text-light_txt bg-light_bg_bright2 border-primary border-2 py-1 px-3 focus:outline-none transition-all duration-1000 ease-in-out;
+}
+
+.INPUT3{
+    @apply rounded-md text-light_txt bg-light_bg_bright2 py-2 h-12 px-3 border-2 border-light_txt placeholder-light_txt transition-all duration-1000 ease-in-out;
+}

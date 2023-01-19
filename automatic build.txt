@@ -1,0 +1,7 @@
+npx tailwindcss -i ./SRC/css_user/style.css -o ./PUBLIC/css_user/style.css --watch
+
+
+
+
+
+npx tailwindcss -i ./SRC/css_admin/style.css -o ./PUBLIC/css_admin/style.css --watch
