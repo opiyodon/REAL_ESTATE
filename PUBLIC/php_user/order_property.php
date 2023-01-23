@@ -8,7 +8,7 @@
 
         <div class="ROW flex justify-center">
             <div>
-                <p class="SECTION_TITLE">Search</p>
+                <p class="SECTION_TITLE">Searchs</p>
             </div>
         </div>
 
