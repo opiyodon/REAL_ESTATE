@@ -678,6 +678,14 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.mr-10{
+  margin-right: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -738,16 +746,16 @@ video {
   height: 11rem;
 }
 
+.h-screen{
+  height: 100vh;
+}
+
 .h-16{
   height: 4rem;
 }
 
 .h-14{
   height: 3.5rem;
-}
-
-.h-screen{
-  height: 100vh;
 }
 
 .h-1{
@@ -838,8 +846,19 @@ video {
   border-collapse: collapse;
 }
 
+.rotate-6{
+  --tw-rotate: 6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .rotate-180{
   --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.scale-150{
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -875,6 +894,10 @@ video {
 
 .flex-col{
   flex-direction: column;
+}
+
+.items-end{
+  align-items: flex-end;
 }
 
 .items-center{
@@ -947,6 +970,18 @@ video {
 
 .gap-7{
   gap: 1.75rem;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
+.scroll-smooth{
+  scroll-behavior: smooth;
 }
 
 .rounded-3xl{
@@ -1080,11 +1115,6 @@ video {
   background-color: var(--primary3);
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .bg-primary{
   background-color: var(--primary);
 }
@@ -1103,6 +1133,11 @@ video {
 
 .bg-primary5{
   background-color: var(--primary5);
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-red-600{
@@ -1181,12 +1216,12 @@ video {
   padding: 2.5rem;
 }
 
-.p-4{
-  padding: 1rem;
-}
-
 .p-2{
   padding: 0.5rem;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .p-7{
@@ -1283,21 +1318,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1306,6 +1326,11 @@ video {
 .py-28{
   padding-top: 7rem;
   padding-bottom: 7rem;
+}
+
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-4{
@@ -1331,6 +1356,16 @@ video {
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-7{
@@ -1418,12 +1453,12 @@ video {
   padding-right: 1.25rem;
 }
 
-.pl-10{
-  padding-left: 2.5rem;
-}
-
 .pb-7{
   padding-bottom: 1.75rem;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
 }
 
 .pr-12{
@@ -1448,6 +1483,22 @@ video {
 
 .pb-10{
   padding-bottom: 2.5rem;
+}
+
+.pr-10{
+  padding-right: 2.5rem;
+}
+
+.pr-20{
+  padding-right: 5rem;
+}
+
+.pr-28{
+  padding-right: 7rem;
+}
+
+.pr-24{
+  padding-right: 6rem;
 }
 
 .text-left{
@@ -1562,6 +1613,11 @@ video {
   color: var(--light_txt2);
 }
 
+.text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .text-red-700{
   --tw-text-opacity: 1;
   color: rgb(185 28 28 / var(--tw-text-opacity));
@@ -1581,11 +1637,6 @@ video {
   color: var(--bg_bright);
 }
 
-.text-gray-800{
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
 .underline{
   text-decoration-line: underline;
 }
@@ -1596,6 +1647,10 @@ video {
 
 .placeholder-light_txt::placeholder{
   color: var(--light_txt);
+}
+
+.opacity-0{
+  opacity: 0;
 }
 
 .shadow-2xl{
@@ -1677,6 +1732,11 @@ video {
 
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body.DARK{
@@ -2132,10 +2192,6 @@ td{
   gap: 2.5rem;
 }
 
-.hover\:bg-primary:hover{
-  background-color: var(--primary);
-}
-
 .hover\:bg-primary2:hover{
   background-color: var(--primary2);
 }
@@ -2159,6 +2215,15 @@ td{
 .hover\:text-red-600:hover{
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-light_txt:hover{
+  color: var(--light_txt);
 }
 
 .hover\:underline:hover{

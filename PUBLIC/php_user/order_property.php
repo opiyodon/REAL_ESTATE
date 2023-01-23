@@ -8,13 +8,17 @@
 
         <div class="ROW flex justify-center">
             <div>
-                <p class="SECTION_TITLE">Properties</p>
+                <p class="SECTION_TITLE">Search</p>
             </div>
         </div>
 
         <div class="PROPERTY_TITLE flex justify-center">
+            <?php
+                //Get the search keyword
+                $search2=$_POST['type'];
+            ?>
             <p class="font-bold text-light_txt text-5xl font-poppins py-5">
-                All Listings
+                Property on <span class="text-primary">"<?php echo $search2 ?>"</span>
             </p>
         </div>
 
@@ -22,8 +26,10 @@
 
 
                 <?php
+                    //Get the search keyword
+                    $search=$_POST['type'];
                     //query to get all admin
-                    $sql = "SELECT * FROM property ORDER BY id DESC";
+                    $sql = "SELECT * FROM property WHERE type LIKE '%$search%' ORDER BY id DESC";
                     //execute the query
                     $res = mysqli_query($conn, $sql);
 
@@ -63,7 +69,7 @@
                                 //displaying the values in our table
                                 ?>
 
-                                    <a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>">
+                                    <a href="<?php echo SITEURL_USER; ?>property.php?id=<?php echo $id; ?>">
 
                                     <!-- ===============UPDATE CARD THEN DELETE ||| START============ -->
                                     <div class="cadz w-96">

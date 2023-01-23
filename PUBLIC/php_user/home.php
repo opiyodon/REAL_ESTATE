@@ -193,7 +193,7 @@
 						<div class="ROW py-4">
 							<div class="ABOUT_COMMENT text-gray-800 bg-primary3 py-5 px-8 rounded-lg border-l-8 border-l-primary h-full">
 								<p>
-									"Over 39,000 people work for us in more than 70 countries all over the world. This breadth of global coverage, combined with specialist services enable us to stay the top of the world market"
+									"Choose your living style today. Here at Homeverse we help you live your dreams to the fullest by giving your the best property of your choice at all times."
 								</p>
 							</div>
 						</div>
@@ -241,13 +241,13 @@
 						<div class="SERVICE_TITLE">Buy a home</div>
 
 						<div class="SERVICE_TEXT">
-							<p>This is a dummy text for filling out spaces. Juat some random words.</p>
+							<p>Buying a home? Look no further, homverse has the best houses and property you would marvel looking at.</p>
 						</div>
 						
 						<a href="<?php echo SITEURL_USER; ?>property.php">
 							<div class="text-primary flex gap-5 hover:gap-10 cursor-pointer justify-center pt-5">
 								<p>Find A Home</p>
-								<i>2</i>
+								<i>>></i>
 							</div>
 						</a>
 					</div>
@@ -264,13 +264,13 @@
 						<div class="SERVICE_TITLE">Rent a home</div>
 
 						<div class="SERVICE_TEXT">
-							<p>This is a dummy text for filling out spaces. Juat some random words.</p>
+							<p>House for rent? Homeverse gives you a platform to find your desired home at the comfort of your seat.</p>
 						</div>
 						
 						<a href="<?php echo SITEURL_USER; ?>property.php">
 							<div class="text-primary flex gap-5 hover:gap-10 cursor-pointer justify-center pt-5">
 								<p>Find A Home</p>
-								<i>2</i>
+								<i>>></i>
 							</div>
 						</a>
 					</div>
@@ -287,13 +287,13 @@
 						<div class="SERVICE_TITLE">Sell a home</div>
 
 						<div class="SERVICE_TEXT">
-							<p>This is a dummy text for filling out spaces. Juat some random words.</p>
+							<p>Looking to sell you home? Simply SUBMIT your property and watch the magic unvail.</p>
 						</div>
 						
-						<a href="<?php echo SITEURL_USER; ?>property.php">
+						<a href="<?php echo SITEURL_USER; ?>add_property.php">
 							<div class="text-primary flex gap-2 hover:gap-10 cursor-pointer justify-center pt-5">
-								<p>Find A Home</p>
-								<i>2</i>
+								<p>Submit Property</p>
+								<i>>></i>
 							</div>
 						</a>
 					</div>
@@ -322,7 +322,7 @@
 
 				<div class="pt-5 pl-5">
 					<p class="text-xl">Top Rated</p>
-					<p class="text-base font-normal pt-4 text-gray-300">This is a dummy text for filling out spaces. This is just a dummy text for filling out blank spaces.</p>
+					<p class="text-base font-normal pt-1 text-gray-300">Our specialised client services and global outreach enable us to stay the top of the world market.</p>
 				</div>
 			</div>
 
@@ -333,7 +333,7 @@
 
 				<div class="pt-4 pl-5">
 					<p class="text-xl">Experience Quality</p>
-					<p class="text-base font-normal pt-4 text-gray-300">This is a dummy text for filling out spaces. This is just a dummy text for filling out blank spaces.</p>
+					<p class="text-base font-normal pt-1 text-gray-300">We give you the best property of your choice and our experienced personel work 24/7 to give you the best client service.</p>
 				</div>
 			</div>
 
@@ -343,7 +343,7 @@
 
 
 <!--===========================================================================================-->
-	<div class="HOW_IT_WORKS bg-light_bg_bright2">
+	<div class="HOW_IT_WORKS bg-light_bg_bright">
 
 			<div class="pt-4 text-6xl flex justify-center">
 				<p class="SERVICE_SECTION_TITLE">How It Works</p>
@@ -412,7 +412,7 @@
 							<div class="SERVICE_TITLE">Discussion</div>
 
 							<div class="SERVICE_TEXT">
-								<p>This is a dummy text for filling out spaces. Juat some random words.</p>
+								<p>Once you have picked your desired property, you will be able to speak with the property owner and come to an agreement.</p>
 							</div>
 						</div>
 						
@@ -424,7 +424,7 @@
 							<div class="SERVICE_TITLE">Files Review</div>
 
 							<div class="SERVICE_TEXT">
-								<p>This is a dummy text for filling out spaces. Juat some random words.</p>
+								<p>Thereafter all property details are reviewed to confirm legitimacy. At this stage, you are required to sign legal documents.</p>
 							</div>
 						</div>
 						
@@ -436,7 +436,7 @@
 							<div class="SERVICE_TITLE">Acquire</div>
 
 							<div class="SERVICE_TEXT">
-								<p>This is a dummy text for filling out spaces. Juat some random words.</p>
+								<p>Finally you acquire your property after all legal procedures have been followed. The property is then legally yours.</p>
 							</div>
 						</div>
 						
@@ -455,7 +455,7 @@
 	<!--===========================================================SERVICE SECTION END====================================================-->
 
 	<!--===========================================================PROPERTY SECTION START====================================================-->
-	<section id="Property" class="pt-5 pb-24 bg-light_bg_bright -mt-24">
+	<section id="Property" class="pt-5 pb-24 pl-10 bg-light_bg_bright2 -mt-24">
 
 		<a name="Property">
 			<div class="PROPERTY">
@@ -471,6 +471,14 @@
 						Featured Listings
 					</p>
 				</div>
+
+				<a href="<?php echo SITEURL_USER; ?>property.php">
+					<div class="ROW flex justify-end pr-24 pb-5">
+						<div>
+							<p class="text-primary hover:text-light_txt underline">All Listings >></p>
+						</div>
+					</div>
+				</a>
 
 				<div class="ROW py-1 px-7 flex gap-5">
 
@@ -517,7 +525,7 @@
                                         //displaying the values in our table
                                         ?>
 
-											<a href="<?php echo SITEURL_USER; ?>property.php?id=<?php echo $id; ?>">
+											<a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>">
 
 											<!-- ===============UPDATE CARD THEN DELETE ||| START============ -->
 											<div class="cadz w-96">
@@ -562,7 +570,7 @@
 														</div>
 												</div>
 
-												<div class="px-5 py-8 bg-light_bg_bright2 rounded-b-xl w-full">
+												<div class="px-5 py-8 bg-light_bg_bright rounded-b-xl w-full">
 
 													<div class="AMOUNT flex text-red-700">
 														<p class="font-bold text-2xl">$ <?php echo $price; ?></p>
@@ -654,7 +662,7 @@
                                     ?>
                                     <tr>
                                         <td>
-                                            <div class="ERROR">We Do Not Have Data in Database.</div>
+                                            <div class="ERROR">No Property has been listed yet.</div>
                                         </td>
                                     </tr>
                                     <?php
@@ -676,185 +684,8 @@
 		</section>
 	<!--===========================================================PROPERTY SECTION END====================================================-->
 
-	<!--===========================================================AMENITIES SECTION START====================================================-->
-<section id="Amenities" class="pt-5 pb-24">
-
-	<a name="Amenities">
-		<div class="AMENITIES">
-	
-			<div class="ROW flex justify-center">
-				<div>
-					<p class="SECTION_TITLE">Our Amenities</p>
-				</div>
-			</div>
-
-			<div class="AMENITIES_TITLE flex justify-center">
-				<p class="font-bold text-light_txt text-5xl font-poppins py-5">
-					Building Amenities
-				</p>
-			</div>
-
-			<div class="flex flex-col gap-10">
-
-				<div class="ROW flex gap-10">
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-				</div>
-
-
-				<div class="ROW flex gap-10 pl-10">
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-
-					<div class="Card4 hover:bg-primary transition-all duration-500 ease-in-out">
-
-						<div class="px-12 py-6 rounded-full bg-primary3 w-11 flex justify-center">
-							<i class="fas fa-sun text-5xl text-primary"></i>
-						</div>
-	
-						<div class="relative">
-							<div class="SERVICE_TITLE">Parking Space</div>
-							
-							<a href="#" class="flex justify-center">
-								<div class="absolute text-light_txt2 flex gap-5 cursor-pointer justify-center">
-									<p class="rounded-full bg-white p-4"></p>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-				</div>
-
-			</div>
-			
-		</div>
-	</a>
-	
-	</section>
-	<!--===========================================================AMENITIES SECTION END====================================================-->
-
 	<!--===========================================================BLOG SECTION START====================================================-->
-<section id="Blog" class="pt-5 pb-24 bg-light_bg_bright">
+<section id="Blog" class="pt-5 pb-24 pl-10 bg-light_bg_bright">
 
 	<a name="Blog">
 		<div class="BLOG">
@@ -871,7 +702,15 @@
 				</p>
 			</div>
 
-			<div class="ROW px-10 flex gap-10">
+			<a href="<?php echo SITEURL_USER; ?>blog.php">
+				<div class="ROW flex justify-end pr-24 pb-5">
+					<div>
+						<p class="text-primary hover:text-light_txt underline">All News Feeds >></p>
+					</div>
+				</div>
+			</a>
+
+			<div class="ROW py-1 px-7 flex gap-5">
 
 						<?php
                             //query to get all admin
@@ -908,9 +747,9 @@
                                         //displaying the values in our table
                                         ?>
 
-											<a href="<?php echo SITEURL_USER; ?>property.php?id=<?php echo $id; ?>">
+											<a href="<?php echo SITEURL_USER; ?>blog_details.php?id=<?php echo $id; ?>">
 
-												<div class="cadz">
+												<div class="cadz w-96">
 													<div class="relative text-white">
 														<img src="../images/property/background/<?php echo $backgroundName; ?>" alt="<?php echo $backgroundName; ?>" class="rounded-t-xl object-cover">
 													</div>
@@ -949,11 +788,9 @@
 															</div>
 														</div>
 
-														<a href="#">
-															<div class="HOUSE font-bold">
-																<p class="text-2xl py-2 hover:text-red-600"><?php echo $comment ?></p>
-															</div>
-														</a>
+														<div class="HOUSE font-bold">
+															<p class="text-2xl py-2 hover:text-red-600"><?php echo $comment ?></p>
+														</div>
 
 														<div class="ROW flex justify-between">
 															<div class="TEXT text-light_txt2 py-2 flex">
@@ -993,7 +830,7 @@
                                     ?>
                                     <tr>
                                         <td>
-                                            <div class="ERROR">We Do Not Have Data in Database.</div>
+                                            <div class="ERROR">No Blog has been added yet.</div>
                                         </td>
                                     </tr>
                                     <?php

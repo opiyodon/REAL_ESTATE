@@ -42,6 +42,11 @@
 }
 
 
+html,body{
+    @apply overflow-x-hidden scroll-smooth;
+}
+
+
 body.DARK{
     @apply DARK_MODE transition-all duration-1000 ease-in-out;
 }
