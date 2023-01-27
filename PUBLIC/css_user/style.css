@@ -1753,13 +1753,6 @@ body.DARK{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.ACTIVE{
-  color: var(--primary);
-  transition-property: all;
-  transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .SEARCH_GROUP{
   padding-top: 1.25rem;
   transition-property: all;
@@ -1824,6 +1817,19 @@ body.DARK{
 }
 
 .SECTION_TITLE{
+  display: flex;
+  width: 11rem;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: var(--primary3);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--primary);
+}
+
+.SECTION_TITLE_2{
   display: flex;
   width: 11rem;
   justify-content: center;

@@ -158,7 +158,7 @@
                                                         <a href="<?php echo SITEURL_ADMIN; ?>update_property.php?id=<?php echo $id; ?>">
                                                             <p class="BTN_SEC">Update Property</p>
                                                         </a>
-                                                        <a href="<?php echo SITEURL_ADMIN; ?>delete_property.php?id=<?php echo $id; ?>&backgroundName=<?php echo $backgroundName ?>&pictureName=<?php echo $pictureName ?>">
+                                                        <a href="<?php echo SITEURL_ADMIN; ?>delete_property.php?id=<?php echo $id; ?>&backgroundName=<?php echo $backgroundName; ?>&pictureName=<?php echo $pictureName; ?>">
                                                             <p class="BTN_DAN">Delete Property</p>
                                                         </a>
                                                     </div>

@@ -51,10 +51,6 @@ body.DARK{
     @apply DARK_MODE transition-all duration-1000 ease-in-out;
 }
 
-.ACTIVE{
-    @apply text-primary transition-all duration-1000 ease-in-out;
-}
-
 .SEARCH_GROUP{
     @apply pt-5 transition-all duration-1000 ease-in-out;
 }
@@ -72,6 +68,10 @@ body.DARK{
 }
 
 .SECTION_TITLE{
+    @apply text-xl flex justify-center w-44 py-1 rounded-full bg-primary3 text-primary;
+}
+
+.SECTION_TITLE_2{
     @apply text-xl flex justify-center w-44 py-1 rounded-full bg-primary3 text-primary;
 }
 

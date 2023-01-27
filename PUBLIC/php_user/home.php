@@ -198,7 +198,7 @@
 							</div>
 						</div>
 
-						<a href="#Service">
+						<a href="<?php echo SITEURL_USER; ?>home.php#Service">
 							<div class="SERVICE_BUTTON py-5 text-white">
 								<input type="submit" name="submit" class="BTN2 w-44 flex justify-center" value="OUR SERVICES">
 							</div>
@@ -525,7 +525,7 @@
                                         //displaying the values in our table
                                         ?>
 
-											<a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>">
+											<a href="<?php echo SITEURL_USER; ?>selected_property.php?id=<?php echo $id; ?>&name=<?php echo $name; ?>">
 
 											<!-- ===============UPDATE CARD THEN DELETE ||| START============ -->
 											<div class="cadz w-96">

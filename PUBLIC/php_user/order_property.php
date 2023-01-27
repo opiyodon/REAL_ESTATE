@@ -13,9 +13,18 @@
         </div>
 
         <div class="PROPERTY_TITLE flex justify-center">
-            <p class="font-bold text-light_txt text-5xl font-poppins py-5">
-                You Selected...
-            </p>
+            <?php
+
+                //get property name
+                $name=$_GET['name'];
+                //display property name in result
+                ?>
+                    <p class="font-bold text-light_txt text-5xl font-poppins py-5">
+                        You Selected <span class="text-primary">"<?php echo $name ?>"</span>
+                    </p>
+                <?php
+                
+            ?>
         </div>
 
         <div class="ROW py-1 px-7 flex gap-5">
@@ -63,7 +72,7 @@
                                 //displaying the values in our table
                                 ?>
 
-                                    <div class="ROW"></div>
+                                    <div class="PROPERTY_CARD"></div>
 
                                 <?php
 
