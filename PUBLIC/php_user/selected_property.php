@@ -320,7 +320,7 @@
                                                                             <div class="rounded-l-full rounded-r-lg border-2 border-primary px-5 py-2 flex gap-5 align-middle items-center">
 
                                                                                 <div class="ROW flex gap-5 items-center border-r-2 border-primary pr-5">
-                                                                                    <div class="PIC">
+                                                                                    <div class="PIC w-10">
                                                                                         <?php
 
                                                                                             //check whether image is availabele or not
@@ -341,7 +341,7 @@
 
                                                                                         ?>
                                                                                     </div>
-                                                                                    <div class="NAME">
+                                                                                    <div class="NAME w-24">
                                                                                         <p><?php echo $username ?></p>
                                                                                     </div>
                                                                                 </div>
@@ -380,7 +380,7 @@
                                                         <div class="SECTION_TITLE_2">Add Review</div>
                                                     </div>
                                                     <div class="ADD_REVIEW py-2 px-3">
-                                                        <form action="" method="POST" class="flex">
+                                                        <form action="" method="POST" enctype="multipart/form-data" class="flex">
 
                                                             <table class="">
                                                                 
