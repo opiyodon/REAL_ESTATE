@@ -47,3 +47,28 @@ LightDarkToggle.addEventListener("click", () => {
         localStorage.setItem('DARK_MODE','LIGHT');
     }
 })
+/* ====================================================================================================================
+  ================================   SWITCH PICTURES   ==============================================================
+  ==================================================================================================================== */
+
+/*============================== Pictures Toggle in selected_property.php =====================================*/
+//
+/* ====================================================================================================================
+  ================================   REVIEW TOGGLER   ==============================================================
+  ==================================================================================================================== */
+
+/*============================== Review Toggle in selected_property.php =====================================*/
+const R_TOGGLER = document.querySelector(".R_TOGGLER");
+const R_CONTAINER = document.querySelector(".R_CONTAINER");
+
+R_TOGGLER.addEventListener("click", () => {
+    R_CONTAINER.classList.toggle("ACTIVE_REVIEW");
+    if(R_CONTAINER.classList.contains("ACTIVE_REVIEW"))
+    {
+        R_TOGGLER.innerHTML.setItem('View All >>','View Less >>');
+    }
+    else
+    {
+        R_TOGGLER.innerHTML.setItem('View Less >>','View All >>');
+    }
+})
