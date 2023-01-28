@@ -221,7 +221,42 @@
 
                                                             <p>4.8</p>
                                                             <p>|</p>
-                                                            <p>20 Reviews</p>
+                                                            <?php
+                                                                //get property id
+                                                                $p_id=$_GET['id'];
+                                                                
+                                                                //query to get all admin
+                                                                $sql = "SELECT * FROM reviews WHERE property_id=$p_id ORDER BY id DESC";
+                                                                //execute the query
+                                                                $res = mysqli_query($conn, $sql);
+
+                                                                //check whether the query is executed or not
+                                                                if($res==TRUE)
+                                                                {
+                                                                    //Count rows to check whether we have data in database or not
+                                                                    $count = mysqli_num_rows($res);//function to get all rows in the database
+
+                                                                    //check the num of rows
+                                                                    if($count>0)
+                                                                    {
+                                                                        //we have data in database
+
+                                                                            //displaying the values in our card
+                                                                            ?>
+
+                                                                                <p><?php echo $count ?> Reviews</p>
+
+                                                                            <?php
+
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        ?>
+                                                                            <p>0 Reviews</p>
+                                                                        <?php
+                                                                    }
+                                                                }
+                                                            ?>
 
                                                     </div>
 
