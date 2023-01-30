@@ -1,5 +1,5 @@
 <!--===========================================================FOOTER SECTION START====================================================-->
-<section id="Footer" class="pt-5">
+<section id="Footer" class="">
 
     <div class="Footer px-28 py-10 bg-light_bg_dim font-normal text-gray-300">
     

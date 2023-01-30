@@ -29,6 +29,12 @@
                             echo $_SESSION['upload2']; //displaying session message
                             unset($_SESSION['upload2']); //removing session message
                         }
+
+                        if(isset($_SESSION['upload3'])) //checking wether session message is set or not
+                        {
+                            echo $_SESSION['upload3']; //displaying session message
+                            unset($_SESSION['upload3']); //removing session message
+                        }
                     ?>
 
                     <form action="" method="POST" enctype="multipart/form-data" class="flex justify-center">
@@ -99,16 +105,30 @@
                                     </tr>
 
                                     <tr class="flex gap-5">
-                                        <td class="w-44">Select Picture :</td>
+                                        <td class="w-44">Select Picture 1 :</td>
                                         <td>
                                             <input type="file" class="INPUT w-80" name="pictureName">
                                         </td>
                                     </tr>
 
                                     <tr class="flex gap-5">
-                                        <td class="w-44">Price :</td>
+                                        <td class="w-44">Select Picture 2 :</td>
                                         <td>
-                                            <input type="number" class="INPUT" name="price" placeholder="Enter Property Price">
+                                            <input type="file" class="INPUT w-80" name="pictureName2">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="flex gap-5">
+                                        <td class="w-44">Old Price :</td>
+                                        <td>
+                                            <input type="number" class="INPUT" name="oldPrice" placeholder="Enter Property Price">
+                                        </td>
+                                    </tr>
+
+                                    <tr class="flex gap-5">
+                                        <td class="w-44">Discount :</td>
+                                        <td>
+                                            <input type="number" class="INPUT" name="discount" placeholder="Enter Property Discount">
                                         </td>
                                     </tr>
 
@@ -230,7 +250,8 @@
                             $type = $_POST['type'];
                             $status = $_POST['status'];
                             $city = $_POST['city'];
-                            $price = $_POST['price'];
+                            $oldPrice = $_POST['oldPrice'];
+                            $discount = $_POST['discount'];
                             $bedrooms = $_POST['bedrooms'];
                             $bathrooms = $_POST['bathrooms'];
                             $squareFt = $_POST['squareFt'];
@@ -347,6 +368,54 @@
                                 $image_name2 = ""; //setting default value as blank
                             }
 
+                            //2b. Upload images if selected
+                            //check whether Select Image is clicked or not and upload image only if selected
+                            if(isset($_FILES['pictureName2']['name']))
+                            {
+                                //get the details of the selected image
+                                $image_name3 = $_FILES['pictureName2']['name'];
+
+                                //check whether the image is selected or not and upload image only if selected
+                                if($image_name3!="")
+                                {
+                                    //image is selected
+                                    //A.REname the image
+                                    //get the extension of selected image
+                                    $ext = end(explode('.', $image_name3));
+
+                                    //create new name for image
+                                    $image_name3 = "Picture-Name2-".rand(0000,9999).".".$ext; //new image name may be "Picture-Name2-8462.jpg"
+
+                                    //B.UPload the image
+                                    //get the SRC path and Destination path
+
+                                    //Source path is the current location of image to be uploaded
+                                    $src = $_FILES['pictureName2']['tmp_name'];
+
+                                    //Destination path is the location uploaded image will be stored
+                                    $dst = "../images/property/picture/".$image_name3;
+
+                                    //finally upload the image
+                                    $upload = move_uploaded_file($src, $dst);
+
+                                    //check whether image uploaded or not
+                                    if($upload==false)
+                                    {
+                                        //failed to upload the image
+                                        //redirect to home page with error
+                                        $_SESSION['upload3'] = "<div class='ERROR flex justify-end'>Failed to Upload Image</div>";
+                                        header('location:'.SITEURL_USER.'home.php');
+                                        ob_end_flush();
+                                        //stop the process
+                                        die();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                $image_name3 = ""; //setting default value as blank
+                            }
+
                             //3. SQL Query to Save the data into database
                             //for numerical values we do not need to pass value inside quotes "" but for string values it is compulsory
                             $sql = "INSERT INTO property SET
@@ -356,7 +425,11 @@
                                 city = '$city',
                                 backgroundName = '$image_name',
                                 pictureName = '$image_name2',
-                                price = $price,
+                                pictureName2 = '$image_name3',
+                                oldPrice = $oldPrice,
+                                discount = $discount,
+                                price = ($oldPrice-$discount),
+                                discountPercent = ($discount/$oldPrice*100),
                                 bedrooms = $bedrooms,
                                 bathrooms = $bathrooms,
                                 squareFt = $squareFt,
@@ -368,7 +441,6 @@
                                 phone = $phone,
                                 whatsapp = $whatsapp,
                                 email = '$email'
-                                blog = 'No'
                             ";
 
                             //4. Executing query and inserting data into database

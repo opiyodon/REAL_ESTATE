@@ -20,7 +20,7 @@
                 //display property name in result
                 ?>
                     <p class="font-bold text-light_txt text-5xl font-poppins py-5">
-                        You Selected <span class="text-primary">"<?php echo $name ?>"</span>
+                        Order on <span class="text-primary">"<?php echo $name ?>"</span>
                     </p>
                 <?php
                 

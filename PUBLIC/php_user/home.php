@@ -485,7 +485,7 @@
 
 						<?php
                             //query to get all admin
-                            $sql = "SELECT * FROM property ORDER BY id DESC LIMIT 3";
+                            $sql = "SELECT * FROM property WHERE featured='Yes' AND active='Yes' ORDER BY id DESC LIMIT 3";
                             //execute the query
                             $res = mysqli_query($conn, $sql);
 

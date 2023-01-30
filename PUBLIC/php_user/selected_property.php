@@ -1,7 +1,7 @@
 <?php include('../partials_user/menu.php'); ?>
 
 <!--===========================================================SELECTED PROPERTY SECTION START====================================================-->
-<section class="pt-5 pb-24 bg-light_bg_bright -mb-10">
+<section class="pt-5 pb-24 bg-light_bg_bright">
 
 
     <div class="SELECTED_PROPERTY">
@@ -75,7 +75,11 @@
                                 $city=$rows['city'];
                                 $backgroundName=$rows['backgroundName'];
                                 $pictureName=$rows['pictureName'];
+                                $pictureName2=$rows['pictureName2'];
+                                $oldPrice=$rows['oldPrice'];
+                                $discount=$rows['discount'];
                                 $price=$rows['price'];
+                                $discountPercent=$rows['discountPercent'];
                                 $bedrooms=$rows['bedrooms'];
                                 $bathrooms=$rows['bathrooms'];
                                 $squareFt=$rows['squareFt'];
@@ -176,12 +180,12 @@
                                                             <?php
 
                                                                 //check whether image is availabele or not
-                                                                if($pictureName!="")
+                                                                if($pictureName2!="")
                                                                 {
                                                                     //display image
                                                                     ?>
 
-                                                                    <img src="../images/property/picture/<?php echo $pictureName ?>" class="w-full rounded-sm">
+                                                                    <img src="../images/property/picture/<?php echo $pictureName2 ?>" class="w-full rounded-sm">
 
                                                                     <?php
                                                                 }
@@ -272,10 +276,10 @@
                                                         <div class="flex flex-row justify-center gap-2 rounded-l-lg rounded-r-full py-2 px-5 border-2 border-primary w-full relative">
                                                             <p>Price : </p>
                                                             <p>Ksh.<?php echo $price; ?></p>
-                                                            <strike class="text-red-600"><p>Ksh.<?php echo $price; ?>-30%</p></strike>
+                                                            <strike class="text-red-600"><p>Ksh.<?php echo $oldPrice ; ?></p> </strike>
                                                             <div class="flex justify-end">
-                                                                <div class="absolute -top-10 rounded-full bg-primary backdrop-blur-md">
-                                                                    <p class="py-1 px-3 flex text-center">30%<br>off</p>
+                                                                <div class="absolute -top-10 rounded-full bg-primary2 backdrop-blur-md">
+                                                                    <p class="py-1 px-3 flex text-primary text-center"><?php echo $discountPercent ?>%<br>off</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -566,6 +570,9 @@
                                                         <p> Status : <?php echo $status; ?></p>
                                                         <p> Location : <?php echo $city; ?></p>
                                                         <p> Description : <?php echo $description; ?></p>
+                                                        <p> Old Price : Ksh.<?php echo $oldPrice; ?></p>
+                                                        <p> Discount : Ksh.<?php echo $discount; ?></p>
+                                                        <p> Percent : <?php echo $discountPercent; ?>%</p>
                                                         <p> Price : Ksh.<?php echo $price; ?></p>
                                                         <p> Bedrooms : <?php echo $bedrooms; ?></p>
                                                         <p> Bathrooms : <?php echo $bathrooms; ?></p>
@@ -631,12 +638,12 @@
                                                             <?php
 
                                                                 //check whether image is availabele or not
-                                                                if($pictureName!="")
+                                                                if($pictureName2!="")
                                                                 {
                                                                     //display image
                                                                     ?>
 
-                                                                    <img src="../images/property/picture/<?php echo $pictureName ?>" class="w-full rounded-md">
+                                                                    <img src="../images/property/picture/<?php echo $pictureName2 ?>" class="w-full rounded-md">
 
                                                                     <?php
                                                                 }
@@ -654,7 +661,7 @@
                                             </section>
 
                                             <div class="ROW pt-10">
-                                                <a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>" class="BTN2 w-28 flex justify-center">Submit</a>
+                                                <a href="<?php echo SITEURL_USER; ?>order_property.php?id=<?php echo $id; ?>&name=<?php echo $name; ?>" class="BTN2 w-28 flex justify-center">Submit</a>
                                             </div>
                                             
                                         </div>
