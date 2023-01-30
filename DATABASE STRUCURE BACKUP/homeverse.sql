@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2023 at 04:29 PM
+-- Generation Time: Jan 30, 2023 at 12:56 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -35,7 +35,11 @@ CREATE TABLE `property` (
   `city` varchar(255) NOT NULL,
   `backgroundName` varchar(255) NOT NULL,
   `pictureName` varchar(255) NOT NULL,
+  `pictureName2` varchar(255) NOT NULL,
+  `oldPrice` int(11) NOT NULL,
+  `discount` int(11) NOT NULL,
   `price` int(11) NOT NULL,
+  `discountPercent` int(11) NOT NULL,
   `bedrooms` int(11) NOT NULL,
   `bathrooms` int(11) NOT NULL,
   `squareFt` int(11) NOT NULL,
@@ -57,10 +61,11 @@ CREATE TABLE `property` (
 -- Dumping data for table `property`
 --
 
-INSERT INTO `property` (`id`, `name`, `type`, `status`, `city`, `backgroundName`, `pictureName`, `price`, `bedrooms`, `bathrooms`, `squareFt`, `description`, `featured`, `active`, `owner`, `phone`, `whatsapp`, `email`, `blog`, `comment`, `featured_blog`, `active_blog`, `date`) VALUES
-(1, 'New Flat Nice View', 'flat', 'FOR SALE', '27 Ingram Street, Nairobi', 'Background-Name-4030.jpg', 'Picture-Name-1763.jpg', 5400000, 6, 4, 5040, 'Beautiful Huge 1 Family House in Heart Of Westburry Newly Renovated With New Wood', 'Yes', 'Yes', 'Artkins', 757451020, 757451020, 'bellachao@hotmail.com', 'Yes', 'Most Luxurious Flat in 2022', 'Yes', 'Yes', '2022-12-28'),
-(2, 'Modern Office', 'office', 'FOR SALE', '27 Ingram Street, Nairobi', 'Background-Name-1033.jpg', '', 54500000, 0, 100, 5428, 'Beautiful Huge 1 Family House in Heart Of Westburry Newly Renovated With New Wood', 'No', 'Yes', 'Angel', 710235468, 710235468, 'angel254@hotmail.com', 'Yes', 'Most Classy Office of 2022', 'Yes', 'Yes', '2022-11-14'),
-(4, 'Comfortable House', 'house', 'FOR RENT', '27 Ingram Street, Nairobi', 'Background-Name-1086.jpg', 'Picture-Name-6898.jpg', 985145, 7, 5, 8545, 'Beautiful Huge 1 Family House in Heart Of Westburry Newly Renovated With New Wood', 'No', 'Yes', 'jhtrfd', 757451020, 452321, 'gfyt@gmail.com', 'Yes', 'Most Comfortable House in 2022', 'Yes', 'Yes', '2022-08-23');
+INSERT INTO `property` (`id`, `name`, `type`, `status`, `city`, `backgroundName`, `pictureName`, `pictureName2`, `oldPrice`, `discount`, `price`, `discountPercent`, `bedrooms`, `bathrooms`, `squareFt`, `description`, `featured`, `active`, `owner`, `phone`, `whatsapp`, `email`, `blog`, `comment`, `featured_blog`, `active_blog`, `date`) VALUES
+(1, 'New Flat Nice View', 'flat', 'FOR SALE', '27 Ingram Street, Nairobi', 'Background-Name-4030.jpg', 'Picture-Name-1763.jpg', '0', 0, 0, 5400000, 0, 6, 4, 5040, 'Beautiful Huge 1 Family House in Heart Of Westburry Newly Renovated With New Wood', 'Yes', 'Yes', 'Artkins', 757451020, 757451020, 'bellachao@hotmail.com', 'Yes', 'Most Luxurious Flat in 2022', 'Yes', 'Yes', '2022-12-28'),
+(2, 'Modern Office', 'office', 'FOR SALE', '27 Ingram Street, Nairobi', 'Background-Name-1033.jpg', '', '0', 0, 0, 54500000, 0, 0, 100, 5428, 'Beautiful Huge 1 Family House in Heart Of Westburry Newly Renovated With New Wood', 'Yes', 'Yes', 'Angel', 710235468, 710235468, 'angel254@hotmail.com', 'Yes', 'Most Classy Office of 2022', 'Yes', 'Yes', '2022-11-14'),
+(4, 'Comfortable House', 'house', 'FOR RENT', '27 Ingram Street, Nairobi', 'Background-Name-1086.jpg', 'Picture-Name-6898.jpg', '0', 0, 0, 985145, 0, 7, 5, 8545, 'Beautiful Huge 1 Family House in Heart Of Westburry Newly Renovated With New Wood', 'Yes', 'Yes', 'jhtrfd', 757451020, 452321, 'gfyt@gmail.com', 'Yes', 'Most Comfortable House in 2022', 'Yes', 'Yes', '2022-08-23'),
+(6, 'Cedric Singleton', 'building', 'Select_Status', 'Laborum dolorem fuga', 'Background-Name-1264.jpg', 'Picture-Name-3176.jpg', 'Picture-Name2-683.jpg', 20000, 5000, 15000, 25, 18, 21, 25, 'Maxime explicabo Fa', 'Yes', 'Yes', 'Duis vero quisquam o', 7, 36, 'tizekefyzy@mailinator.com', 'No', '', '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -141,7 +146,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `property`
 --
 ALTER TABLE `property`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `reviews`
