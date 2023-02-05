@@ -184,11 +184,15 @@ td{
 }
 
 .B_cad{
-    @apply border-2 border-primary w-80 h-full rounded-lg object-cover;
+    @apply border-2 border-transparent w-80 h-full rounded-lg object-cover;
 }
 
 .S_cad{
-    @apply border-2 border-primary w-24 h-full rounded-md object-cover cursor-pointer hover:brightness-50;
+    @apply border-2 border-transparent w-24 h-full rounded-md object-cover cursor-pointer hover:brightness-50;
+}
+
+.active_s_cad{
+    @apply border-primary;
 }
 
 .ACTIVE_REVIEW{

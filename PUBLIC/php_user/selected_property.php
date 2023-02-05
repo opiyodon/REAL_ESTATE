@@ -97,12 +97,12 @@
                                     <div class="flex justify-center">
                                         <div class="PROPERTY_CARD flex flex-col p-10 bg-light_bg_bright2 rounded-xl">
 
-                                            <div class="ROW flex gap-10">
+                                            <div class="ROW flex justify-center gap-10">
 
                                                 <div class="ROW">
 
                                                     <div class="BACKGROUND_IMAGE p-2">
-                                                        <div class="B_cad">
+                                                        <div id="B_cad" class="B_cad" name="B_cad">
                                                             <?php
 
                                                                 //check whether image is availabele or not
@@ -111,7 +111,7 @@
                                                                     //display image
                                                                     ?>
 
-                                                                    <img src="../images/property/background/<?php echo $backgroundName ?>" class="w-full rounded-md">
+                                                                    <img id="B_img" src="../images/property/background/<?php echo $backgroundName ?>" class="w-full rounded-lg">
 
                                                                     <?php
                                                                 }
@@ -125,9 +125,9 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="PICTURES flex justify-center gap-3 p-2">
+                                                    <ul class="PICTURES flex justify-center gap-3 p-2">
 
-                                                        <div class="S_cad">
+                                                        <li class="S_cad ///// active_s_cad">
 
                                                             <?php
 
@@ -137,7 +137,7 @@
                                                                     //display image
                                                                     ?>
 
-                                                                    <img src="../images/property/background/<?php echo $backgroundName ?>" class="w-full rounded-sm">
+                                                                    <img id="S_img1" src="../images/property/background/<?php echo $backgroundName ?>" class="w-full rounded-md">
 
                                                                     <?php
                                                                 }
@@ -149,9 +149,9 @@
 
                                                             ?>
                                                             
-                                                        </div>
+                                                        </li>
 
-                                                        <div class="S_cad">
+                                                        <li class="S_cad ///// ">
 
                                                             <?php
 
@@ -161,7 +161,7 @@
                                                                     //display image
                                                                     ?>
 
-                                                                    <img src="../images/property/picture/<?php echo $pictureName ?>" class="w-full rounded-sm">
+                                                                    <img id="S_img2" src="../images/property/picture/<?php echo $pictureName ?>" class="w-full rounded-md">
 
                                                                     <?php
                                                                 }
@@ -173,9 +173,9 @@
 
                                                             ?>
 
-                                                        </div>
+                                                        </li>
 
-                                                        <div class="S_cad">
+                                                        <li class="S_cad ///// ">
 
                                                             <?php
 
@@ -185,7 +185,7 @@
                                                                     //display image
                                                                     ?>
 
-                                                                    <img src="../images/property/picture/<?php echo $pictureName2 ?>" class="w-full rounded-sm">
+                                                                    <img id="S_img3" src="../images/property/picture/<?php echo $pictureName2 ?>" class="w-full rounded-md">
 
                                                                     <?php
                                                                 }
@@ -197,33 +197,33 @@
 
                                                             ?>
 
-                                                        </div>
+                                                        </li>
 
-                                                    </div>
+                                                    </ul>
 
                                                     <div class="RATINGS flex justify-center gap-3 p-2">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
                                                                 <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
                                                             </svg>
 
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
                                                                 <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
                                                             </svg>
 
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
                                                                 <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
                                                             </svg>
 
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
                                                                 <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
                                                             </svg>
 
-                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-primary">
                                                                 <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
                                                             </svg>
 
 
-                                                            <p>4.8</p>
+                                                            <p>5.0</p>
                                                             <p>|</p>
                                                             <?php
                                                                 //get property id
@@ -248,7 +248,7 @@
                                                                             //displaying the values in our card
                                                                             ?>
 
-                                                                                <p><?php echo $count ?> Reviews</p>
+                                                                                <p>Reviews(<?php echo $count ?>)</p>
 
                                                                             <?php
 
@@ -256,7 +256,7 @@
                                                                     else
                                                                     {
                                                                         ?>
-                                                                            <p>0 Reviews</p>
+                                                                            <p>Reviews(0)</p>
                                                                         <?php
                                                                     }
                                                                 }
@@ -586,7 +586,7 @@
                                                     <div class="pb-5">
                                                         <div class="SECTION_TITLE_2">Images</div>
                                                     </div>
-                                                    <div class="flex flex-col items-center gap-10 w-96"><!--============ custom this width to have nice view of photos ==========-->
+                                                    <div class="flex flex-col items-center gap-10 w-[370px]"><!--============ custom this width to have nice view of photos ==========-->
                                                         <div class="pic_box">
 
                                                             <?php
